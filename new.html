@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todo List 2022 with LocalStorage</title>
+    <style>
+        .check:checked ~ .todo-content {
+            background: red;
+        }
+        .content-text{
+            border: none;
+        }
+        .todo-item {
+            display: flex;
+            flex-direction: row;
+            font-size: 30px;
+            border: 2px solid rgb(0, 0, 0);
+            padding: 5px;
+            width: 400px;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+	<!-- App Wrapper -->
+	<main class="app">
+		<!-- New Todo -->
+		<section class="create-todo">
+			<h3>CREATE A TODO</h3>
+			<form id="new-todo-form">
+				<input type="text" placeholder="e.g. Get some milk" name="content" id="content" />
+				<input type="submit" value="Add todo" />
+			</form>
+		</section>
+		<!-- End of New Todo -->
+		<!-- Todo List -->
+        <h3>TODO LIST</h3>
+        <div class="list" id="todo-list"></div>
+		<!-- End of Todo List -->
+	</main>
+	<!-- End of App Wrapper -->
+
+	<!-- JS Import -->
+	<script src="main.js"></script>
+	<!-- End of JS Import -->
+</body>
+</html>
